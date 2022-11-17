@@ -4,4 +4,5 @@ LongPipeline = HTML::Pipeline.new [
   HTMLFilters::KitsuMentionFilter,
   HTML::Pipeline::AutolinkFilter,
   HTMLFilters::UnembedFilter
-], base_url: '/user/', link_attr: 'target="_blank" rel="nofollow" class="autolink"'
+], base_url: '/user/',
+   link_attr: 'target="_blank" rel="nofollow" class="autolink"'

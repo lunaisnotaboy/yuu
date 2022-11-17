@@ -14,8 +14,7 @@ class InstancedCallbacks
     @options ||= OpenStruct.new(@_options)
   end
 
-  # Attach the callbacks to an ActiveRecord::Callbacks-enabled class
-  #
+  # Attach the callbacks to an ActiveSupport::Callbacks-enabled class
   # @param klass [ActiveSupport::Callbacks] the object to hook onto
   # @param options [Hash] a hash of options to this
   def self.hook(klass, options = {})
@@ -36,7 +35,6 @@ class InstancedCallbacks
   end
 
   # Returns a Proc which retrieves the instance from self and calls the given method on it
-  #
   # @param method [Symbol] the method to call
   def self.wrap_callback(method)
     instance_getter = :"#{name}"

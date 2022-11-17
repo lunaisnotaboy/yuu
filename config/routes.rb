@@ -217,7 +217,7 @@ Rails.application.routes.draw do
       mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
       mount Sidekiq::Web => '/sidekiq'
       mount PgHero::Engine => '/pghero'
-      mount Filpper::UI.app(Flipper) => '/flipper'
+      mount Flipper::UI.app(Flipper) => '/flipper'
     end
 
     get '/admin', to: 'sessions#redirect'

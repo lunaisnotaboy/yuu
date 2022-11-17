@@ -22,6 +22,9 @@ module Kitsu
     # noinspection RubyResolve
     config.action_controller.default_protect_from_forgery = false
 
+    # Use `structure.sql` instead of `schema.rb`.
+    config.active_record.schema_format = :sql
+
     # Use UTC for the time zone.
     config.time_zone = 'UTC'
 

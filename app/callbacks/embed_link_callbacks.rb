@@ -20,7 +20,6 @@ class EmbedLinkCallbacks < Callbacks
     EmbedService.new(embed_url).as_json if embed_url
   rescue StandardError => e
     Raven.capture_exception(e)
-
     nil
   end
 

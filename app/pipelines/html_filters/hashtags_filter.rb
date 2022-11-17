@@ -1,4 +1,4 @@
-class HTMLFilters::HashtagsFilter < HTML::Pipeline::Filter
+class HTMLFilters::HashtagsFilter < HTML::Pipeline:: Filter
   # These regexex are reproduced from the twitter/tweet-text library, which is licensed under
   # the Apache 2.0 license.  The originals can be found at the following URL:
   #
@@ -32,8 +32,8 @@ class HTMLFilters::HashtagsFilter < HTML::Pipeline::Filter
     '\u00b7'   # MIDDLE DOT
   ).freeze
   HASHTAG_LETTERS_NUMERALS = HASHTAG_LETTERS_AND_MARKS +
-                             HASHTAG_NUMERALS +
-                             HASHTAG_SPECIAL_CHARS
+                              HASHTAG_NUMERALS +
+                              HASHTAG_SPECIAL_CHARS
   HASHTAG_LETTERS_SET = "[#{HASHTAG_LETTERS_AND_MARKS}]".freeze
   HASHTAG_LETTERS_NUMERALS_SET = "[#{HASHTAG_LETTERS_NUMERALS}]".freeze
 

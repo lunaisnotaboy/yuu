@@ -15,6 +15,7 @@
 !/.yarn/releases
 !/.yarn/sdks
 !/.yarn/versions
+/coverage
 /log/*
 !/log/.keep
 /node_modules
