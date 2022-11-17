@@ -1,0 +1,2 @@
+class PostCommentsFeed < Feed
+end

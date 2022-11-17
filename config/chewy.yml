@@ -1,0 +1,22 @@
+default: &default
+  host: <%= ENV['ELASTICSEARCH_HOST'] %>
+  request_timeout: 7
+  adapter: :net_http
+  sidekiq:
+    queue: 'later'
+
+development:
+  <<: *default
+  prefix: 'development'
+
+test:
+  <<: *default
+  prefix: 'test'
+
+staging:
+  <<: *default
+  prefix: 'production'
+
+production:
+  <<: *default
+  prefix: 'production'

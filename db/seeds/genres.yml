@@ -1,0 +1,184 @@
+action:
+  id: 1
+  name: Action
+adventure:
+  id: 2
+  name: Adventure
+comedy:
+  id: 3
+  name: Comedy
+drama:
+  id: 4
+  name: Drama
+sci-fi:
+  id: 5
+  name: Sci-Fi
+space:
+  id: 6
+  name: Space
+mystery:
+  id: 7
+  name: Mystery
+magic:
+  id: 8
+  name: Magic
+supernatural:
+  id: 9
+  name: Supernatural
+police:
+  id: 10
+  name: Police
+fantasy:
+  id: 11
+  name: Fantasy
+# id:12 is deleted
+sports:
+  id: 13
+  name: Sports
+romance:
+  id: 14
+  name: Romance
+# id:15 is deleted
+slice_of_life:
+  id: 16
+  name: Slice of Life
+cars:
+  id: 17
+  name: Racing
+# id:18 is deleted
+horror:
+  id: 19
+  name: Horror
+psychological:
+  id: 20
+  name: Psychological
+thriller:
+  id: 21
+  name: Thriller
+martial_arts:
+  id: 22
+  name: Martial Arts
+super_power:
+  id: 23
+  name: Super Power
+school:
+  id: 24
+  name: School
+ecchi:
+  id: 25
+  name: Ecchi
+vampire:
+  id: 26
+  name: Vampire
+historical:
+  id: 27
+  name: Historical
+military:
+  id: 28
+  name: Military
+dementia:
+  id: 29
+  name: Dementia
+mecha:
+  id: 30
+  name: Mecha
+demons:
+  id: 31
+  name: Demons
+samurai:
+  id: 32
+  name: Samurai
+# id:33 is deleted
+harem:
+  id: 34
+  name: Harem
+music:
+  id: 35
+  name: Music
+parody:
+  id: 36
+  name: Parody
+shoujo_ai:
+  id: 37
+  name: Shoujo Ai
+game:
+  id: 38
+  name: Game
+shounen_ai:
+  id: 39
+  name: Shounen Ai
+kids:
+  id: 40
+  name: Kids
+hentai:
+  id: 41
+  name: Hentai
+yuri:
+  id: 42
+  name: Yuri
+yaoi:
+  id: 43
+  name: Yaoi
+anime_influenced:
+  id: 44
+  name: Anime Influenced
+gender_bender:
+  id: 45
+  name: Gender Bender
+doujinshi:
+  id: 46
+  name: Doujinshi
+mahou_shoujo:
+  id: 47
+  name: Mahou Shoujo
+mahou_shounen:
+  id: 48
+  name: Mahou Shounen
+gore:
+  id: 49
+  name: Gore
+law:
+  id: 50
+  name: Law
+life:
+  id: 51
+  name: Life
+mature:
+  id: 52
+  name: Mature
+medical:
+  id: 53
+  name: Medical
+political:
+  id: 54
+  name: Political
+tokusatsu:
+  id: 55
+  name: Tokusatsu
+youth:
+  id: 56
+  name: Youth
+business:
+  id: 57
+  name: Business
+crime:
+  id: 58
+  name: Crime
+zombies:
+  id: 59
+  name: Zombies
+documentary:
+  id: 60
+  name: Documentary
+family:
+  id: 61
+  name: Family
+food:
+  id: 62
+  name: Food
+friendship:
+  id: 63
+  name: Friendship
+tragedy:
+  id: 64
+  name: Tragedy

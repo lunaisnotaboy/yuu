@@ -1,0 +1,427 @@
+require:
+  # Disabled until I add the rest of the GraphQL API back
+  # - rubocop-graphql
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+inherit_mode:
+  merge:
+    - Exclude
+
+AllCops:
+  DisplayCopNames: false
+  DisplayStyleGuide: true
+  NewCops: enable
+  StyleGuideCopsOnly: false
+  TargetRubyVersion: 3.0
+
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/DotPosition:
+  EnforcedStyle: leading
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/LeadingCommentSpace:
+  Enabled: true
+
+Layout/LineLength:
+  AllowURI: true
+  Enabled: true
+  Exclude:
+    - config/routes.rb
+  IgnoreCopDirectives: true
+  Max: 100
+
+Layout/SpaceAfterColon:
+  Enabled: true
+
+Layout/SpaceAfterComma:
+  Enabled: true
+
+Layout/SpaceAfterMethodName:
+  Enabled: true
+
+Layout/SpaceAfterNot:
+  Enabled: true
+
+Layout/SpaceAfterSemicolon:
+  Enabled: true
+
+Layout/SpaceAroundEqualsInParameterDefault:
+  Enabled: true
+  EnforcedStyle: space
+
+Layout/SpaceAroundKeyword:
+  Enabled: true
+
+Layout/SpaceAroundOperators:
+  Enabled: true
+
+Layout/SpaceBeforeBlockBraces:
+  Enabled: true
+  EnforcedStyle: space
+
+Layout/SpaceBeforeComma:
+  Enabled: true
+
+Layout/SpaceBeforeComment:
+  Enabled: true
+
+Layout/SpaceBeforeFirstArg:
+  Enabled: true
+
+Layout/SpaceBeforeSemicolon:
+  Enabled: true
+
+Layout/SpaceInsideBlockBraces:
+  Enabled: true
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: no_space
+  SpaceBeforeBlockParameters: true
+
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: true
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: no_space
+
+Layout/SpaceInsideParens:
+  Enabled: true
+
+Layout/SpaceInsideRangeLiteral:
+  Enabled: true
+
+Layout/TrailingEmptyLines:
+  Enabled: true
+  EnforcedStyle: final_newline
+
+Layout/TrailingWhitespace:
+  Enabled: true
+
+Lint/AssignmentInCondition:
+  AllowSafeAssignment: true
+  Enabled: true
+
+Lint/Debugger:
+  Enabled: true
+
+Lint/DeprecatedClassMethods:
+  Enabled: true
+
+Lint/FlipFlop:
+  Enabled: true
+
+Lint/LiteralInInterpolation:
+  Enabled: true
+
+Lint/Loop:
+  Enabled: true
+
+Lint/ParenthesesAsGroupedExpression:
+  Enabled: true
+
+Lint/RequireParentheses:
+  Enabled: false
+
+Lint/SuppressedException:
+  Enabled: true
+
+Lint/UnderscorePrefixedVariableName:
+  Enabled: true
+
+Lint/UselessSetterCall:
+  Enabled: true
+
+Metrics/AbcSize:
+  Enabled: true
+  Max: 25
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/BlockNesting:
+  Enabled: true
+  Max: 5
+
+Metrics/ClassLength:
+  CountComments: false
+  Enabled: true
+  Max: 500
+
+Metrics/CyclomaticComplexity:
+  Enabled: true
+  Max: 10
+
+Metrics/MethodLength:
+  CountComments: false
+  Enabled: true
+  Max: 100
+
+Metrics/ModuleLength:
+  CountComments: false
+  Enabled: true
+  Max: 500
+
+Metrics/ParameterLists:
+  CountKeywordArgs: false
+  Enabled: true
+  Max: 5
+
+Metrics/PerceivedComplexity:
+  Enabled: true
+  Max: 8
+
+Naming/AccessorMethodName:
+  Enabled: true
+
+Naming/AsciiIdentifiers:
+  Enabled: true
+
+Naming/FileName:
+  Enabled: true
+  Exclude: ['**/jsonapi-resources.rb']
+
+Naming/PredicateName:
+  Enabled: true
+  Exclude:
+    - app/graphql/types/**/*
+  ForbiddenPrefixes:
+    - is_
+  NamePrefix:
+    - is_
+    - has_
+    - have_
+
+Naming/VariableName:
+  Enabled: true
+  EnforcedStyle: snake_case
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Rails/TimeZone:
+  Enabled: false
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - staging
+    - development
+    - test
+
+RSpec/ExampleLength:
+  Max: 20
+
+Security/Eval:
+  Enabled: true
+
+Style/Alias:
+  Enabled: true
+  EnforcedStyle: prefer_alias_method
+
+Style/ArrayJoin:
+  Enabled: true
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/Attr:
+  Enabled: true
+
+Style/BlockComments:
+  Enabled: true
+
+Style/BlockDelimiters:
+  EnforcedStyle: braces_for_chaining
+
+Style/ClassAndModuleChildren:
+  Enabled: true
+  Exclude:
+    - app/graphql/**/*
+
+Style/CollectionMethods:
+  PreferredMethods:
+    collect: map
+    collect!: map!
+    detect: find
+    find_all: select
+    inject: reduce
+
+Style/ColonMethodCall:
+  Enabled: true
+
+Style/CommentAnnotation:
+  Enabled: true
+  Keywords:
+    - TODO
+    - FIXME
+    - OPTIMIZE
+    - HACK
+    - REVIEW
+    - DEPRECATED
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyLiteral:
+  Enabled: true
+
+Style/EvenOdd:
+  Enabled: true
+
+Style/FormatString:
+  Enabled: true
+  EnforcedStyle: format
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/GlobalVars:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: true
+  MinBodyLength: 3
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Style/IfUnlessModifier:
+  Enabled: true
+
+Style/IfWithSemicolon:
+  Enabled: true
+
+Style/InlineComment:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: true
+  EnforcedStyle: literal
+
+Style/LambdaCall:
+  Enabled: true
+
+Style/MethodCalledOnDoEndBlock:
+  Enabled: true
+
+Style/MultilineBlockChain:
+  Enabled: true
+
+Style/MultilineTernaryOperator:
+  Enabled: true
+
+Style/NegatedIf:
+  Enabled: true
+
+Style/NestedTernaryOperator:
+  Enabled: true
+
+Style/NilComparison:
+  Enabled: true
+
+Style/Not:
+  Enabled: true
+
+Style/Next:
+  Enabled: true
+  MinBodyLength: 3
+
+Style/NumericLiterals:
+  Enabled: true
+  MinDigits: 5
+
+Style/OneLineConditional:
+  Enabled: true
+
+Style/PercentLiteralDelimiters:
+  Enabled: true
+  PreferredDelimiters:
+    '%': '[]'
+    '%i': '[]'
+    '%q': '[]'
+    '%Q': '[]'
+    '%r': '{}'
+    '%s': '()'
+    '%w': '[]'
+    '%W': '[]'
+    '%x': '[]'
+
+Style/PerlBackrefs:
+  Enabled: true
+
+Style/RaiseArgs:
+  Enabled: true
+  EnforcedStyle: exploded
+
+Style/RedundantBegin:
+  Enabled: true
+
+Style/RedundantSelf:
+  Enabled: true
+
+Style/RescueModifier:
+  Enabled: true
+
+Style/SelfAssignment:
+  Enabled: true
+
+Style/SingleLineMethods:
+  AllowIfMethodIsEmpty: true
+  Enabled: true
+
+Style/SpecialGlobalVars:
+  Enabled: true
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/SymbolArray:
+  Enabled: true
+
+Style/SymbolProc:
+  Enabled: true
+
+Style/TrailingCommaInArguments:
+  Enabled: true
+  EnforcedStyleForMultiline: no_comma
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: true
+  EnforcedStyleForMultiline: no_comma
+
+Style/TrailingCommaInHashLiteral:
+  Enabled: true
+  EnforcedStyleForMultiline: no_comma
+
+Style/TrivialAccessors:
+  AllowDSLWriters: true
+  Enabled: true
+
+Style/UnlessElse:
+  Enabled: true
+
+Style/VariableInterpolation:
+  Enabled: true
+
+Style/WhenThen:
+  Enabled: true
+
+Style/WordArray:
+  Enabled: true
+  MinSize: 2

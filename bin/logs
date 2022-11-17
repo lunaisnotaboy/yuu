@@ -1,5 +1,0 @@
-#!/bin/bash
-
-containers="${@:-api web worker}"
-
-docker compose logs $containers

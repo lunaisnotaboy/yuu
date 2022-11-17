@@ -1,0 +1,8 @@
+{
+  "path-intellisense.mappings": {
+    "@": "${workspaceRoot}/app/frontend/"
+  },
+  "solargraph.bundlerPath": "bin/bundle",
+  "solargraph.commandPath": "bin/solargraph",
+  "typescript.tsdk": "node_modules\\typescript\\lib"
+}

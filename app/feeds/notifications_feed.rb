@@ -1,0 +1,2 @@
+class NotificationsFeed < Feed
+end

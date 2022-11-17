@@ -1,0 +1,2 @@
+class AMAFeed < Feed
+end

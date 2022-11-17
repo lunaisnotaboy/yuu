@@ -1,0 +1,145 @@
+twitter:
+  id: 1
+  name: Twitter
+  validate_find: '\A(https?://)?(www.)?(twitter.com/)?(@)?(?<username>[a-zA-Z0-9_]+)\z'
+  validate_replace: 'https://twitter.com/\k<username>'
+facebook:
+  id: 2
+  name: Facebook
+  validate_find: '\A(https?://)?(www.)?(facebook.com/)?(?<username>[a-zA-z0-9_.]+)\z'
+  validate_replace: 'https://facebook.com/\k<username>'
+youtube:
+  id: 3
+  name: YouTube
+  validate_find: '\A(https?://)?(www.)?(youtube.com/)?(?<channel>user|c|channel)?/?(?<username>[a-zA-z0-9_\-]+)\z'
+  validate_replace: 'https://youtube.com/\k<channel>/\k<username>'
+google:
+  id: 4
+  name: Google
+  validate_find: '\A(https?://)?(www.)?(plus.google.com/)?(?<username>.+)\z'
+  validate_replace: 'https://plus.google.com/\k<username>'
+instagram:
+  id: 5
+  name: Instagram
+  validate_find: '\A(https?://)?(www.)?(instagram.com/)?(?<username>[a-zA-z0-9_.]+)\z'
+  validate_replace: 'https://instagram.com/\k<username>'
+twitch:
+  id: 6
+  name: Twitch
+  validate_find: '\A(https?://)?(www.)?(twitch.tv/)?(#)?(?<username>[a-zA-z0-9_]+)\z'
+  validate_replace: 'https://twitch.tv/\k<username>'
+vimeo:
+  id: 7
+  name: Vimeo
+  validate_find: '\A(https?://)?(www.)?(vimeo.com/)?(?<username>[a-zA-z0-9_\-]+)\z'
+  validate_replace: 'https://vimeo.com/\k<username>'
+github:
+  id: 8
+  name: GitHub
+  validate_find: '\A(https?://)?(www.)?(github.com/)?@?(?<username>[a-zA-z0-9\-]+)\z'
+  validate_replace: 'https://github.com/\k<username>'
+battlenet:
+  id: 9
+  name: Battle.net
+  validate_find: '\A(.+#[0-9]+)\z'
+  validate_replace: '\1'
+steam:
+  id: 10
+  name: Steam
+  validate_find: '\A(https?://)?(www.)?(steamcommunity.com/id/)?(?<username>[a-zA-z0-9_\-]+)\z'
+  validate_replace: 'http://steamcommunity.com/id/\k<username>'
+raptr:
+  id: 11
+  name: Raptr
+  validate_find: '\A(https?://)?(www.)?(raptr.com/)?(?<username>[a-zA-z0-9_\-]+)\z'
+  validate_replace: 'http://raptr.com/\k<username>'
+discord:
+  id: 12
+  name: Discord
+  validate_find: '\A(.+#[0-9]+)\z'
+  validate_replace: '\1'
+tumblr:
+  id: 13
+  name: Tumblr
+  validate_find: '\A(https?://)?(www.)?(?<username>[a-zA-z0-9_\-]+)(.tumblr.com)?/?\z'
+  validate_replace: 'https://\k<username>.tumblr.com/'
+soundcloud:
+  id: 14
+  name: SoundCloud
+  validate_find: '\A(https?://)?(www.)?(soundcloud.com/)?(?<username>[a-zA-z0-9_\-]+)\z'
+  validate_replace: 'https://soundcloud.com/\k<username>'
+dailymotion:
+  id: 15
+  name: Dailymotion
+  validate_find: '\A(https?://)?(www.)?(dailymotion.com/)?(?<username>[a-zA-z0-9_\-]+)\z'
+  validate_replace: 'https://dailymotion.com/\k<username>'
+kickstarter:
+  id: 16
+  name: Kickstarter
+  validate_find: '\A(https?://)?(www.)?(kickstarter.com/profile/)?(?<username>[a-zA-z0-9_.\-]+)\z'
+  validate_replace: 'https://kickstarter.com/profile/\k<username>'
+mobcrush:
+  id: 17
+  name: Mobcrush
+  validate_find: '\A(https?://)?(www.)?(mobcrush.com/)?(?<username>[a-zA-z0-9_\-]+)\z'
+  validate_replace: 'https://mobcrush.com/\k<username>'
+osu:
+  id: 18
+  name: Osu!
+  validate_find: '\A(https?://)?(www.)?(osu.ppy.sh/u/)?(?<username>[0-9]+)\z'
+  validate_replace: 'https://osu.ppy.sh/u/\k<username>'
+patreon:
+  id: 19
+  name: Patreon
+  validate_find: '\A(https?://)?(www.)?(patreon.com/)?(?<username>[a-zA-z0-9_\-]+)\z'
+  validate_replace: 'https://patreon.com/\k<username>'
+deviantart:
+  id: 20
+  name: DeviantArt
+  validate_find: '\A(https?://)?((www.)?deviantart.com/?)?(?:(?<username>[a-zA-z0-9-]+)(.deviantart.com/?)?)\z'
+  validate_replace: 'https://deviantart.com/\k<username>/'
+dribbble:
+  id: 21
+  name: Dribbble
+  validate_find: '\A(https?://)?(www.)?(dribbble.com/)?(?<username>[a-zA-z0-9_\-]+)\z'
+  validate_replace: 'https://dribbble.com/\k<username>'
+imdb:
+  id: 22
+  name: IMDb
+  validate_find: '\A(https?://)?(www.)?(imdb.com/)?(user/)?(?<username>[a-zA-z0-9]+)\z'
+  validate_replace: 'https://www.imdb.com/user/\k<username>'
+lastfm:
+  id: 23
+  name: Last.fm
+  validate_find: '\A(https?://)?(www.)?(last.fm/)?(user/)?(?<username>[a-zA-z0-9_\-]+)\z'
+  validate_replace: 'https://last.fm/user/\k<username>'
+letterboxd:
+  id: 24
+  name: Letterboxd
+  validate_find: '\A(https?://)?(www.)?(letterboxd.com/)?(?<username>[a-zA-z0-9_]+)\z'
+  validate_replace: 'https://letterboxd.com/\k<username>'
+medium:
+  id: 25
+  name: Medium
+  validate_find: '\A(https?://)?(www.)?(medium.com/)?(?<username>[a-zA-Z0-9@_.]+)\z'
+  validate_replace: 'https://medium.com/\k<username>'
+playerme:
+  id: 26
+  name: Player.me
+  validate_find: '\A(https?://)?(www.)?(player.me/)?(?<username>[a-zA-z0-9_\-]+)\z'
+  validate_replace: 'https://player.me/\k<username>'
+reddit:
+  id: 27
+  name: Reddit
+  validate_find: '\A(https?://)?(www.)?(reddit.com/)?(user/|u/)?(/u/)?(?<username>[a-zA-z0-9_\-]+)\z'
+  validate_replace: 'https://reddit.com/user/\k<username>'
+trakt:
+  id: 28
+  name: Trakt
+  validate_find: '\A(https?://)?(www.)?(trakt.tv/)?(users/)?(?<username>.+)\z'
+  validate_replace: 'https://trakt.tv/users/\k<username>'
+website:
+  id: 29
+  name: Website
+  validate_find: '\A(?<protocol>https?:\/\/)(www.)?(?<url>(.)+)\z'
+  validate_replace: '\k<protocol>\k<url>'
