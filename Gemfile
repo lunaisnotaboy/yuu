@@ -76,7 +76,7 @@ gem 'pundit'
 gem 'pundit-resources', github: 'hummingbird-me/pundit-resources'
 gem 'rack-attack'
 gem 'rack-cors'
-gem 'rails', '6.1.6'
+gem 'rails', '6.1.6.1'
 gem 'rails_admin', github: 'railsadminteam/rails_admin'
 gem 'ranked-model'
 gem 'redis', '> 3.3.0', require: ['redis', 'redis/connection/hiredis']
