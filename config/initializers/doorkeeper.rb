@@ -31,4 +31,32 @@ Doorkeeper.configure do
     # TODO: write error! method and use Pundit
     User.find(doorkeeper_token[:resource_owner_id])
   end
+
+  # => Token Configuration
+  access_token_expires_in 30.days # Expire access tokens
+  reuse_access_token # Reuse access tokens if possible
+  use_refresh_token # Issue refresh tokens
+
+  # => Application Registration
+  # Require an owner for each application
+  # NOTE: you must also run the `rails g doorkeeper:application_owner` generator
+  # to provide the necessary support
+  enable_application_owner confirmation: true
+
+  # => Available Scopes
+  default_scopes :public
+  optional_scopes :everything
+
+  # Force SSL for redirect URI
+  force_ssl_in_redirect_uri !Rails.env.development?
+
+  grant_flows %w[
+    authorization_code client_credentials implicit password assertion
+  ]
+
+  realm 'Kitsu'
+end
+
+Doorkeeper::AccessToken.class_eval do
+  belongs_to :resource_owner, class_name: 'User'
 end

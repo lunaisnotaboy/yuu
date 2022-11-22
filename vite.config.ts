@@ -1,8 +1,9 @@
+import { defineConfig, Plugin, splitVendorChunkPlugin as SplitVendorChunkPlugin } from 'vite'
 import ReactPlugin from '@vitejs/plugin-react'
-import { defineConfig, Plugin } from 'vite'
 import GZipPlugin from 'rollup-plugin-gzip'
 import { brotliCompressSync } from 'zlib'
 import RubyPlugin from 'vite-plugin-ruby'
+import SVGRPlugin from 'vite-plugin-svgr'
 
 export default defineConfig({
   build: {
@@ -20,7 +21,9 @@ export default defineConfig({
       fileName: '.br'
     }) as Plugin),
     ReactPlugin(),
-    RubyPlugin()
+    RubyPlugin(),
+    SplitVendorChunkPlugin(),
+    SVGRPlugin()
   ],
   resolve: {
     alias: {

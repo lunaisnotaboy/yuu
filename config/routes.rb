@@ -1,6 +1,6 @@
 require 'sidekiq/web'
 
-Rails.application.routes.draw do
+Kitsu::Application.routes.draw do
   scope '/api' do
     mount HealthBit.rack => '/_health'
 

@@ -1,2 +1,21 @@
 <!DOCTYPE html>
-<html></html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <title>Kitsu</title>
+
+    <%= vite_client_tag %>
+    <%= vite_stylesheet_tag 'application.css' %>
+    <%= vite_typescript_tag 'application' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

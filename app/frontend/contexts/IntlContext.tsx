@@ -90,3 +90,5 @@ export function useDateFnsLocale(): DateFnsLocale {
 export function useLocale(): LocaleState {
   return React.useContext(LocaleContext)
 }
+
+export default IntlContext

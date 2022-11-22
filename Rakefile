@@ -1,3 +1,3 @@
 require_relative 'config/application'
 
-Rails.application.load_tasks
+Kitsu::Application.load_tasks

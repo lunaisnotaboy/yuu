@@ -1,11 +1,13 @@
 ---
 include:
-  - '**/*.rb'
+  - './**/*.rb'
+  - './vendor/resource_serializer.rb'
 exclude:
-  - spec/**/*
-  - test/**/*
-  - vendor/**/*
-  - '.bundle/**/*'
+  - './.bundle/**/*'
+  - './db/**/*.rb'
+  - './spec/**/*'
+  - './test/**/*'
+  - './vendor/**/*'
 require: []
 domains: []
 reporters:

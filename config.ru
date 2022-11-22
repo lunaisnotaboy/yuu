@@ -1,4 +1,4 @@
 require_relative 'config/environment'
 
-run Rails.application
-Rails.application.run_server
+run Kitsu::Application
+Kitsu::Application.run_server

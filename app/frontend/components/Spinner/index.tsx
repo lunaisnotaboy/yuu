@@ -22,7 +22,7 @@ export const SpinnerBlock: React.FC<
   HTMLProps<HTMLDivElement> & {
     size?: React.SVGAttributes<SVGElement>['height']
   }
-> = function ({ size = '3em', className, ...props }) {
+> = ({ size = '3em', className, ...props }) => {
   return (
     <div className={[styles.spinnerBlock, className].join(' ')} {...props}>
       <Spinner size={size} />

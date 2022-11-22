@@ -24,10 +24,10 @@ body {
   font-size: var(--font-me);
   font-weight: var(--font-regular);
   min-height: 100vh;
-}
 
-body.scroll-lock {
-  overflow: hidden;
+  &.scroll-lock {
+    overflow: hidden;
+  }
 }
 
 h1,
