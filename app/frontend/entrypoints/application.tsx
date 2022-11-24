@@ -17,7 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
       return page
     },
     setup({ el, App, props }) {
-      render(<App {...props} />, el)
+      render(
+        <React.StrictMode>
+          <App {...props} />
+        </React.StrictMode>,
+        el
+      )
     }
   })
 })
