@@ -51,4 +51,8 @@ Yuu::Application.configure do
 
   # Use the cache store for user sessions.
   config.session_store :cache_store
+
+  # Use Letter Opener Web for emails.
+  config.action_mailer.delivery_method = :letter_opener_web
+  config.action_mailer.perform_deliveries = true
 end
