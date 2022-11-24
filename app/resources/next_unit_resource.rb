@@ -1,1 +1,0 @@
-class NextUnitResource < BaseResource; end

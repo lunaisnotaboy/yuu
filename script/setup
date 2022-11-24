@@ -1,0 +1,49 @@
+#!/bin/sh
+
+# script/setup: Set up application for the first time after cloning, or set it
+#               back to the initial first unused state.
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+script/bootstrap
+
+echo "==> Setting up memcached…"
+cd "$(dirname "$0")/../vendor"
+curl -sO http://www.memcached.org/files/memcached-1.6.15.tar.gz
+tar xf memcached-1.6.15.tar.gz
+cd memcached-1.6.15
+./configure
+make
+cd ".."
+
+echo "==> Setting up Redis…"
+curl -sO https://download.redis.io/redis-stable.tar.gz
+tar xf redis-stable.tar.gz
+cd redis-stable
+make
+cd ".."
+
+echo "==> Setting up Overmind…"
+mkdir overmind
+cd overmind
+curl -sO https://github.com/DarthSim/overmind/releases/download/v2.3.0/overmind-v2.3.0-linux-amd64.gz
+gzip -d overmind-v2.3.0-linux-amd64.gz
+mv overmind-v2.3.0-linux-amd64 overmind
+chmod +x overmind
+cd "../.."
+
+echo "==> Setting up DB…"
+# Reset the database to a fresh state.
+bin/rails db:reset
+
+if [ -z "$RAILS_ENV" ] && [ -z "$RACK_ENV" ]; then
+  # Only things for a development environment will run inside here
+  # Do things that need to be done to the application to set up for the first
+  # time. Or things needed to be run to to reset the application back to first
+  # use experience. These things are scoped to the application's domain.
+  true
+fi
+
+echo "==> App is now ready to go!"

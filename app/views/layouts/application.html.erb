@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="<%= I18n.locale %>">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +8,10 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <title>Kitsu</title>
+    <title>Yuu</title>
 
     <%= vite_client_tag %>
-    <%= vite_stylesheet_tag 'application.css' %>
+    <%= vite_stylesheet_tag 'application.scss' %>
     <%= vite_typescript_tag 'application' %>
   </head>
 

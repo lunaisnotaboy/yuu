@@ -1,2 +1,0 @@
-class CommunityRecommendationRequestFeed < Feed
-end

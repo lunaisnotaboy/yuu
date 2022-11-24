@@ -1,1 +1,0 @@
-class ResourceResource < BaseResource; end

@@ -1,1 +1,0 @@
-class DestinationResource < BaseResource; end

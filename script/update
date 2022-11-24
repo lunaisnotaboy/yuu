@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# script/update: Update application to run for its current checkout.
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+script/bootstrap
+
+echo "==> Updating DB…"
+# Run all database migrations to ensure everything is up to date.
+bin/rails db:migrate
+
+echo "==> Indexing code…"
+bin/solargraph bundle

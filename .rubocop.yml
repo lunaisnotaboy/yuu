@@ -1,6 +1,4 @@
 require:
-  # Disabled until I add the rest of the GraphQL API back
-  # - rubocop-graphql
   - rubocop-performance
   - rubocop-rails
   - rubocop-rspec
@@ -281,9 +279,6 @@ Style/EvenOdd:
 Style/FormatString:
   Enabled: true
   EnforcedStyle: format
-
-Style/FrozenStringLiteralComment:
-  Enabled: false
 
 Style/GlobalVars:
   Enabled: false

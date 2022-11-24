@@ -1,2 +1,0 @@
-class PostFeed < Feed
-end

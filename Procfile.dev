@@ -1,0 +1,5 @@
+web: bin/rails s -p 3000
+vite: bin/vite dev
+sidekiq: bin/sidekiq
+memcached: bin/memcached -vv
+redis: bin/redis-server

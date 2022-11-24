@@ -4,8 +4,5 @@
   },
   "solargraph.bundlerPath": "bin/bundle",
   "solargraph.commandPath": "bin/solargraph",
-  "typescript.tsdk": "node_modules\\typescript\\lib",
-  "files.associations": {
-    "*.css": "scss"
-  }
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }

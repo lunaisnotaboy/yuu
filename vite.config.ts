@@ -3,16 +3,15 @@ import ReactPlugin from '@vitejs/plugin-react'
 import GZipPlugin from 'rollup-plugin-gzip'
 import { brotliCompressSync } from 'zlib'
 import RubyPlugin from 'vite-plugin-ruby'
-import SVGRPlugin from 'vite-plugin-svgr'
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   build: {
     cssCodeSplit: true,
-    sourcemap: process.env.RAILS_ENV !== 'production'
+    sourcemap: mode !== 'production'
   },
   clearScreen: false,
   define: {
-    _DEV_: process.env.RAILS_ENV !== 'production'
+    _DEV_: mode !== 'production'
   },
   plugins: [
     (GZipPlugin() as Plugin),
@@ -22,12 +21,11 @@ export default defineConfig({
     }) as Plugin),
     ReactPlugin(),
     RubyPlugin(),
-    SplitVendorChunkPlugin(),
-    SVGRPlugin()
+    SplitVendorChunkPlugin()
   ],
   resolve: {
     alias: {
       '@/': `${__dirname}/app/frontend/`
     }
   }
-})
+}))

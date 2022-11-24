@@ -1,1 +1,0 @@
-class ActorResource < BaseResource; end

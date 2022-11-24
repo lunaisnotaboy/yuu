@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# script/dbdump: Dump the database to a file in `dumps/`.
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+script/bootstrap
+
+if [ -n "$1" ]; then
+  pg_dump --file="dumps/yuu_$1_$(date -u +"%Y%m%d%H%M%S").sql" --inserts "yuu_$1"
+else
+  pg_dump --file="dumps/yuu_development_$(date -u +"%Y%m%d%H%M%S").sql" --inserts "yuu_development"
+fi

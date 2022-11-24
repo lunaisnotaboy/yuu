@@ -1,2 +1,0 @@
-class NotificationsFeed < Feed
-end

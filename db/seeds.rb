@@ -1,19 +1,21 @@
-# Load seeds from YAML files in db/seeds/*
+# frozen_string_literal: true
 
-require 'seed_file'
+# Load seeds from YAML files in `db/seeds`
 
-MAX_ID = (2**30) - 1
-SEED_DIR = 'db/seeds'
+# require 'seed_file'
 
-previous_logger = ApplicationRecord.logger
-ApplicationRecord.logger = Logger.new(nil)
+# MAX_ID = (2**30) - 1
+# SEED_DIR = 'db/seeds'
 
-Dir[Rails.root.join("#{SEED_DIR}/*.yml")].each do |f|
-  seed = SeedFile.new(f)
-  puts "==> Seeding: #{seed.model.name}"
-  print '  '
-  seed.import! { |key| print "#{key} | " }
-  print "\n"
-end
+# previous_logger = ApplicationRecord.logger
+# ApplicationRecord.logger = Logger.new(nil)
 
-ApplicationRecord.logger = previous_logger
+# Dir[Rails.root.join("#{SEED_DIR}/*.yml")].each do |f|
+#   seed = SeedFile.new(f)
+#   puts "==> Seeding: #{seed.model.name}"
+#   print '  '
+#   seed.import! { |key| print "#{key} | " }
+#   print "\n"
+# end
+
+# ApplicationRecord.logger = previous_logger

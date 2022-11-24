@@ -1,6 +1,6 @@
-# Kitsu
+# Yuu
 
-Kitsu is a modern content discovery platform that helps anime and manga fans track, share and discover more of what they love.
+Yuu is an anime and manga tracker forked from Kitsu.
 
 ## Requirements
 
@@ -12,4 +12,4 @@ Kitsu is a modern content discovery platform that helps anime and manga fans tra
 
 ## License
 
-Kitsu is licensed under the [Apache-2.0 license](LICENSE).
+Yuu is licensed under the [Apache-2.0 license](LICENSE).

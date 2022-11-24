@@ -1,1 +1,0 @@
-class SpoiledUnitResource < BaseResource; end

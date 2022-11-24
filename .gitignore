@@ -16,6 +16,8 @@
 !/.yarn/sdks
 !/.yarn/versions
 /coverage
+/dumps/*
+!/dumps/.keep
 /log/*
 !/log/.keep
 /node_modules
@@ -23,7 +25,13 @@
 /public/uploads
 /tmp/*
 !/tmp/.keep
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
 /vendor/gems
+/vendor/memcached-*
+/vendor/overmind
+/vendor/redis-stable*
 /vendor/various
 /.env
 /.env.local
@@ -33,9 +41,10 @@
 /.env.production.local
 /.env.test
 /.env.test.local
+*.dump
+*.rdb
 .overmind.sock
 .pnp.*
 .yarn-integrity
 yarn-debug.log*
 yarn-error.log
-*.dump

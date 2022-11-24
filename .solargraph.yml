@@ -1,7 +1,6 @@
 ---
 include:
   - './**/*.rb'
-  - './vendor/resource_serializer.rb'
 exclude:
   - './.bundle/**/*'
   - './db/**/*.rb'

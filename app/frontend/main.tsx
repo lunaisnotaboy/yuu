@@ -1,16 +1,11 @@
-import { BrowserRouter } from 'react-router-dom'
-import { setTheme } from '@/theme-init'
 import ReactDOM from 'react-dom'
-import { App } from '@/App'
 import React from 'react'
 
-export const main = async () => {
-  setTheme()
-
+export const main = () => {
   ReactDOM.render(
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>,
+    <React.StrictMode>
+      <h1>Hello, World!</h1>
+    </React.StrictMode>,
     document.getElementById('app')
   )
 }
