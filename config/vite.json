@@ -2,6 +2,7 @@
   "all": {
     "assetsDir": "",
     "sourceCodeDir": "app/frontend",
+    "ssrOutputDir": "public/assets-ssr",
     "watchAdditionalPaths": []
   },
   "development": {
